@@ -1,0 +1,12 @@
+# Ultra-minimal config for Railway free tier (512MB RAM)
+# No TensorFlow, no machine learning - just keyword matching
+recipe: default.v1
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: KeywordIntentClassifier
+
+policies:
+  - name: RulePolicy

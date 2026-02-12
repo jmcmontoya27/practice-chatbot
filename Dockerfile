@@ -12,13 +12,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rm -rf /var/lib/apt/lists/*
 
 # Install Python packages
-COPY requirements-basic.txt requirements.txt
+COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
 # Copy configuration files
-COPY config-basic.yml config.yml
-COPY domain-basic.yml domain.yml
+COPY config.yml config.yml
+COPY domain.yml domain.yml
 COPY credentials.yml endpoints.yml /app/
 COPY data /app/data
 

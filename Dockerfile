@@ -26,7 +26,7 @@ COPY data /app/data
 RUN rasa train --fixed-model-name basic-model
 
 # Copy startup script
-COPY start-basic.sh start.sh
+COPY start.sh start.sh
 RUN chmod +x /app/start.sh
 
 EXPOSE 5000

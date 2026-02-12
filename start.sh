@@ -2,6 +2,8 @@
 set -e
 
 echo "Starting Basic Rasa Chatbot..."
+echo "Checking environment variables..."
+echo "FB_VERIFY_TOKEN is set: ${FB_VERIFY_TOKEN:+YES}"
 
 # Start Rasa server (no actions server needed for basic bot)
 exec rasa run \

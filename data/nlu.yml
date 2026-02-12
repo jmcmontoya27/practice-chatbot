@@ -84,7 +84,7 @@ nlu:
     - so sad
 
 - intent: bot_challenge
-  examples: |
+  examples: | 
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
